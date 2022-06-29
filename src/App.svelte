@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "./styles/app.scss";
+  import Styles from "./styles/styles.svelte";
   import PublicLayout from "./layouts/__PublicLayout.svelte";
   import { Route } from "svelte-navigator";
   import Home from "./routes/Home.svelte";
@@ -20,6 +20,3 @@
     </Route>
   </Route>
 </PublicLayout>
-
-<style lang="scss">
-</style>

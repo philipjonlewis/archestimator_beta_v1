@@ -5,9 +5,9 @@
 </script>
 
 <Router>
-  <div class="container h-screen mx-auto flex flex-col justify-between">
+  <div class="page-container">
     <Navbar />
-    <div class="main-container">
+    <div class="content-container">
       <slot />
     </div>
     <Footer />
@@ -15,7 +15,11 @@
 </Router>
 
 <style lang="scss">
-  .main-container {
-    @apply container h-full;
+  .page-container {
+    @apply container h-screen mx-auto flex flex-col justify-between;
+
+    .content-container {
+      @apply container h-full;
+    }
   }
 </style>
