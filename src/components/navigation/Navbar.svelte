@@ -8,7 +8,7 @@
 <nav class="upper-container">
   <div class="upper-nav-container">
     <div>
-      <Link to="/"><p class="logo">archestimator.</p></Link>
+      <Link to="/home"><p class="logo">archestimator.</p></Link>
     </div>
     <div class="flex items-center gap-4 text-gray-800">
       <Link to="/home">
@@ -53,13 +53,13 @@
 
 <style lang="scss">
   .upper-container {
-    @apply flex flex-col gap-0 justify-between items-center font-sans text-sm w-full mb-2;
+    @apply flex flex-col gap-0 justify-between items-center font-sans text-sm w-full;
 
     .upper-nav-container {
       @apply flex justify-between w-full py-4 border-b-[1px] border-gray-200;
 
       .logo {
-        @apply text-amber-600 text-xl font-semibold w-full;
+        @apply flex justify-center items-center text-amber-600 text-xl font-semibold w-full h-full;
         // background-color: yellow;
 
         font-family: "Space Grotesk", sans-serif;

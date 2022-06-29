@@ -18,7 +18,7 @@
   }
 
   .home-content {
+    @apply mt-2;
     height: 100%;
-    background-color: yellow;
   }
 </style>
