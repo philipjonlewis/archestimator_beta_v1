@@ -2,8 +2,8 @@
   import { Router, Link } from "svelte-navigator";
   import Icon from "@iconify/svelte";
   import { identity } from "svelte/internal";
-
-  let activeLink;
+  import { useLocation } from "svelte-navigator";
+  const location = useLocation();
 
   let navLinks = [
     {
@@ -22,7 +22,7 @@
       icon: "tabler:wall",
     },
     {
-      path: "/estimates/wall",
+      path: "/estimates/wood",
       name: "Wood",
       icon: "mdi:hand-saw",
     },
@@ -32,22 +32,21 @@
       icon: "uil:screw",
     },
   ];
-
-  const activeLinkHandler = (name) => {
-    activeLink = name;
-    console.log(activeLink);
-  };
 </script>
 
 <nav class="nav-container">
-  <div>
+  <div class="logo-container">
     <Link to="/"><p class="logo">archestimator.</p></Link>
   </div>
 
   <div class="links-container">
     {#each navLinks as { path, name, icon }}
-      <Link to={path} on:click={() => activeLinkHandler(name)}>
-        <div class={activeLink == name ? "active-link-item" : "link-item"}>
+      <Link to={path}>
+        <div
+          class={$location.pathname.includes(path)
+            ? "active-link-item"
+            : "link-item"}
+        >
           <Icon {icon} height={24} />
           <p>{name}</p>
         </div>
@@ -58,25 +57,28 @@
 
 <style lang="scss">
   .nav-container {
-    @apply flex justify-between items-center mb-2 py-4 font-sans text-sm;
+    @apply flex flex-col gap-0 justify-between  items-center mb-2 py-4 font-sans text-sm w-full;
 
-    .logo {
-      @apply text-orange-600 text-xl font-semibold;
-      // background-color: yellow;
+    .logo-container {
+      @apply w-full py-2 border-b-[1px] border-orange-200;
+      .logo {
+        @apply text-orange-600 text-xl font-semibold w-full;
+        // background-color: yellow;
 
-      font-family: "Space Grotesk", sans-serif;
+        font-family: "Space Grotesk", sans-serif;
+      }
     }
 
     .links-container {
-      @apply flex gap-1 text-slate-600;
+      @apply flex justify-start gap-0 w-full text-zinc-500 border-b-[1px] border-orange-200;
 
       @mixin link-common {
-        @apply flex flex-col gap-2 text-sm justify-center items-center py-1 rounded-t-sm border-b-2 border-transparent min-w-[6rem];
+        @apply flex flex-col gap-2 text-sm justify-center items-center  pb-1 pt-2 rounded-t-sm border-b-2 border-transparent min-w-[6rem];
       }
 
       .link-item {
         @include link-common();
-        @apply hover:bg-stone-100 hover:text-orange-600;
+        @apply hover:bg-orange-50 hover:text-orange-600;
         // background-color: red;
       }
 

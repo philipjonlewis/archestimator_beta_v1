@@ -8,7 +8,7 @@ export default {
     scss: {
       includePaths: ["src"],
       postcss: {
-        plugins: [autoprefixer],
+        plugins: [autoprefixer()],
       },
     },
   }),

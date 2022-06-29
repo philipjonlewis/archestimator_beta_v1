@@ -3,4 +3,4 @@
 
 </script>
 
-<ContentLayout >Paint</ContentLayout>
+<ContentLayout >hardware</ContentLayout>
