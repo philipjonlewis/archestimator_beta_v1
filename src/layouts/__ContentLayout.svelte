@@ -1,7 +1,8 @@
-<script lang="ts">
-  import { fade, fly, crossfade } from "svelte/transition";
+<script>
+  import EstimationNavbar from "../components/navigation/EstimationNavbar.svelte";
 </script>
 
-<div class=" h-full relative">
+<div>
+  <EstimationNavbar />
   <slot />
 </div>

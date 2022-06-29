@@ -1,6 +1,6 @@
 <script>
-  import ContentLayout from "../../layouts/__ContentLayout.svelte";
-
 </script>
 
-<ContentLayout >hardware</ContentLayout>
+<!-- <ContentLayout >hardware</ContentLayout> -->
+
+<div>hardware</div>

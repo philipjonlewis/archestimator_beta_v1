@@ -1,6 +1,6 @@
 <script>
-  import ContentLayout from "../../layouts/__ContentLayout.svelte";
- 
 </script>
 
-<ContentLayout >wood</ContentLayout>
+<!-- <ContentLayout >wood</ContentLayout> -->
+
+<div>Lets Go</div>

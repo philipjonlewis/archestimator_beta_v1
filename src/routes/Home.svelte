@@ -1,1 +1,1 @@
-<div>Home</div>
+<div class="home-content">Home</div>

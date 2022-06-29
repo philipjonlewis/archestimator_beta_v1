@@ -12,4 +12,13 @@
     margin: 0;
     padding: 0;
   }
+
+  body {
+    background-color: #f3f4f6;
+  }
+
+  .home-content {
+    height: 100%;
+    background-color: yellow;
+  }
 </style>

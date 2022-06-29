@@ -1,5 +1,6 @@
 <script>
-  import ContentLayout from "../../layouts/__ContentLayout.svelte";
 </script>
 
-<ContentLayout>CHB</ContentLayout>
+<!-- <ContentLayout>CHB</ContentLayout> -->
+
+<div>CHB</div>

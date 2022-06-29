@@ -3,34 +3,38 @@
   import Styles from "./styles/styles.svelte";
   import PublicLayout from "./layouts/__PublicLayout.svelte";
   import { Route } from "svelte-navigator";
+
   import Home from "./routes/Home.svelte";
-  import Tile from "./routes/estimates/Tile.svelte";
-  import Paint from "./routes/estimates/Paint.svelte";
-  import ConcreteBlocks from "./routes/estimates/ConcreteBlocks.svelte";
-  import Wood from "./routes/estimates/Wood.svelte";
-  import Hardware from "./routes/estimates/Hardware.svelte";
+  import About from "./routes/About.svelte";
+  import Contact from "./routes/Contact.svelte";
+  import {
+    Tile,
+    Paint,
+    ConcreteBlocks,
+    Wood,
+    Hardware,
+    Estimates,
+  } from "./routes/estimates";
+
+  import ContentLayout from "./layouts/__ContentLayout.svelte";
 </script>
 
-<PublicLayout>
-  <Route path="/" primary={false}>
-    <Home />
-  </Route>
+<main>
+  <Styles />
+  <PublicLayout>
+    <Route path="home" primary={false} component={Home} />
+    <Route path="about" primary={false} component={About} />
+    <Route path="contact" primary={false} component={Contact} />
 
-  <Route path="estimates/*" primary={false}>
-    <Route path="/tile" primary={false}>
-      <Tile />
+    <Route path="estimates/*" primary={false}>
+      <ContentLayout>
+        <Route path="/" primary={false} component={Estimates} />
+        <Route path="/tile" primary={false} component={Tile} />
+        <Route path="/paint" primary={false} component={Paint} />
+        <Route path="/chb" primary={false} component={ConcreteBlocks} />
+        <Route path="/wood" primary={false} component={Wood} />
+        <Route path="/hardware" primary={false} component={Hardware} />
+      </ContentLayout>
     </Route>
-    <Route path="/paint" primary={false}>
-      <Paint />
-    </Route>
-    <Route path="/chb" primary={false}>
-      <ConcreteBlocks />
-    </Route>
-    <Route path="/wood" primary={false}>
-      <Wood />
-    </Route>
-    <Route path="/hardware" primary={false}>
-      <Hardware />
-    </Route>
-  </Route>
-</PublicLayout>
+  </PublicLayout>
+</main>
