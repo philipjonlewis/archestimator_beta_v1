@@ -1,0 +1,1 @@
+<footer class=" py-6 mt-2 border-t-[1px] border-gray-300 ">Footer</footer>

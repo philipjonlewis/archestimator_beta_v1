@@ -1,6 +1,5 @@
 <script lang="ts">
-  import "./styles/app.css";
-
+  import "./styles/app.scss";
   import PublicLayout from "./layouts/__PublicLayout.svelte";
   import { Route } from "svelte-navigator";
   import Home from "./routes/Home.svelte";
