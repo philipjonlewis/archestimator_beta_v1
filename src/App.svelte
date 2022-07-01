@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade, fly } from "svelte/transition";
-  import Styles from "./styles/styles.svelte";
+  // import Styles from "./styles/styles.svelte";
   import PublicLayout from "./layouts/__PublicLayout.svelte";
   import { Route } from "svelte-navigator";
 
@@ -20,9 +20,9 @@
 </script>
 
 <main>
-  <Styles />
+  <!-- <Styles /> -->
   <PublicLayout>
-    <Route path="home" primary={false} component={Home} />
+    <Route path="/" primary={false} component={Home} />
     <Route path="about" primary={false} component={About} />
     <Route path="contact" primary={false} component={Contact} />
 
@@ -38,3 +38,11 @@
     </Route>
   </PublicLayout>
 </main>
+
+<style global>
+  .home-content {
+    @apply mt-2;
+    height: 100%;
+    /* background-color: blue; */
+  }
+</style>

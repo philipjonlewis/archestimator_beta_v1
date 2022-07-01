@@ -8,14 +8,12 @@
 <nav class="upper-container">
   <div class="upper-nav-container">
     <div>
-      <Link to="/home"><p class="logo">archestimator.</p></Link>
+      <Link to="/"><p class="logo">archestimator.</p></Link>
     </div>
     <div class="flex items-center gap-4 text-gray-800">
-      <Link to="/home">
+      <Link to="/">
         <div
-          class={$location.pathname.includes("home")
-            ? "active-link-item"
-            : "link-item"}
+          class={$location.pathname == "/" ? "active-link-item" : "link-item"}
         >
           <p>Home</p>
         </div>
