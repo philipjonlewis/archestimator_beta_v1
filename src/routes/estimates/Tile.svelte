@@ -12,17 +12,13 @@
   };
 
   $: tileArea = tileData.tileDimensions.width * tileData.tileDimensions.height;
-
   $: tileCount = Math.ceil(tileData.floorArea / tileArea || 0);
-
   $: tileCountWithContingency =
     Math.ceil(tileData.floorArea / tileArea) + convertedContingency;
-
   $: convertedContingency =
     Math.ceil(
       (tileData.floorArea / tileArea) * toDecimal(tileData.contingency)
     ) || 0;
-
   $: contingencyDisplay =
     isNaN(tileData.contingency) || tileData.contingency == null
       ? 0
