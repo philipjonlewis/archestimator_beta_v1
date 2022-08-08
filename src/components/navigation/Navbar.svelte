@@ -11,7 +11,7 @@
       <Link to="/"><p class="logo">archestimator.</p></Link>
     </div>
     <div class="flex items-center gap-4 text-gray-800">
-      <Link to="/">
+      <!-- <Link to="/">
         <div
           class={$location.pathname == "/" ? "active-link-item" : "link-item"}
         >
@@ -35,8 +35,8 @@
         >
           <p>Contact</p>
         </div>
-      </Link>
-      <Link to="estimates">
+      </Link> -->
+      <!-- <Link to="estimates">
         <div
           class={$location.pathname.includes("estimates")
             ? "active-link-item"
@@ -44,7 +44,7 @@
         >
           <p>Estimates</p>
         </div>
-      </Link>
+      </Link> -->
     </div>
   </div>
 </nav>

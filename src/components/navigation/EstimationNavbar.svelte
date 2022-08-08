@@ -6,31 +6,31 @@
   const location = useLocation();
 
   let navLinks = [
-    {
-      path: "/estimates/tile",
-      name: "Tiles",
-      icon: "icon-park-outline:floor-tile",
-    },
-    {
-      path: "/estimates/paint",
-      name: "Paint",
-      icon: "clarity:paint-roller-solid",
-    },
-    {
-      path: "/estimates/chb",
-      name: "CHB",
-      icon: "tabler:wall",
-    },
-    {
-      path: "/estimates/wood",
-      name: "Wood",
-      icon: "mdi:hand-saw",
-    },
-    {
-      path: "/estimates/hardware",
-      name: "Hardware",
-      icon: "uil:screw",
-    },
+    // {
+    //   path: "/estimates/tile",
+    //   name: "Tiles",
+    //   icon: "icon-park-outline:floor-tile",
+    // },
+    // {
+    //   path: "/estimates/paint",
+    //   name: "Paint",
+    //   icon: "clarity:paint-roller-solid",
+    // },
+    // {
+    //   path: "/estimates/chb",
+    //   name: "CHB",
+    //   icon: "tabler:wall",
+    // },
+    // {
+    //   path: "/estimates/wood",
+    //   name: "Wood",
+    //   icon: "mdi:hand-saw",
+    // },
+    // {
+    //   path: "/estimates/hardware",
+    //   name: "Hardware",
+    //   icon: "uil:screw",
+    // },
   ];
 </script>
 
