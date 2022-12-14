@@ -22,66 +22,77 @@
 </script>
 
 <main>
-  <PublicLayout>
-    <!-- <Route path="/" primary={false} component={Home} />
-    <Route path="about" primary={true} component={About} />
-    <Route path="contact" primary={false} component={Contact} /> -->
-    <Route path="/*" primary={false}>
-      <Tile />
-      <!-- <ContentLayout> -->
-      <!-- <Route path="/" primary={false} component={Estimates} /> -->
-      <!-- <Route path="/" primary={false} component={Tile} /> -->
-      <!-- <p>helo</p> -->
-      <!-- <Route path="/paint" primary={false} component={Paint} />
-        <Route path="/chb" primary={false} component={ConcreteBlocks} />
-        <Route path="/wood" primary={false} component={Wood} />
-        <Route path="/hardware" primary={false} component={Hardware} /> -->
-      <!-- </ContentLayout> -->
-    </Route>
-  </PublicLayout>
+  <div class="content">
+    <nav
+      class="bg-neutral-800 text-white flex flex-row justify-between items-center px-4 py-4 relative rounded-lg"
+    >
+      <div class="flex flex-row items-center">
+        <div class="mr-4 text-lg font-bold pr-4 border-r-[1px]">
+          <p>archestimator.</p>
+        </div>
+        <ul class="flex gap-8 text-xs font-semibold">
+          <li class="border-b-[1px]">Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex gap-6 text-sm">
+          <li
+            class="bg-neutral-700 py-2 px-8 rounded-md text-sm font-semibold hover:bg-red-500 cursor-pointer hover:-translate-y-0.5 transition hover:shadow-md"
+          >
+            Sign Up
+          </li>
+          <li
+            class="bg-neutral-700 py-2 px-8 rounded-md text-sm font-semibold hover:bg-yellow-500 cursor-pointer hover:-translate-y-0.5 transition hover:shadow-md"
+          >
+            Log In
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero-container">
+      <div class="text-left md:text-center flex flex-col p-4">
+        <p class=" text-5xl md:text-6xl font-semibold mb-4">
+          Architectural cost estimation made easy
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+          sequi officia quia molestiae ducimus alias est quas culpa eius.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="curve">hi</div> -->
 </main>
 
 <style global lang="scss">
-  .home-content {
-    @apply mt-2;
-    height: 100%;
-    /* background-color: blue; */
+  main {
+    @apply bg-neutral-900 min-w-full min-h-screen;
+
+    .content {
+      @apply container mx-auto pt-4 flex flex-col gap-4;
+    }
+
+    .hero-container {
+      @apply rounded-lg bg-neutral-800 text-white  flex flex-col justify-center items-center h-64;
+
+      .text {
+        // @apply mr-4 mb-8;
+        // text-align: center;
+        // max-width: 56rem;
+        // @apply ;
+      }
+
+      .cta {
+        @apply text-white bg-yellow-500   rounded-lg shadow-lg p-4 w-96 h-96;
+
+        .title-container {
+          @apply text-xl font-semibold border-b-[1px] pb-4 mb-4;
+        }
+      }
+    }
   }
-
-  // main {
-  //   @apply bg-neutral-100;
-  //   height: 100vh;
-  //   widows: 100vw;
-  //   overflow: hidden;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-
-  //   .message-container {
-  //     @apply bg-orange-100 px-4 py-16 rounded-lg;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     // background-color: orange;
-  //     svg {
-  //       @apply bg-white w-fit rounded-full;
-  //       height: 3rem;
-  //       color: rgb(255, 128, 0);
-  //     }
-
-  //     p {
-  //       @apply text-neutral-600;
-  //     }
-
-  //     p:first-of-type {
-  //       @apply text-sm pt-2;
-  //     }
-
-  //     p {
-  //       @apply text-base;
-  //     }
-  //   }
-  // }
 </style>

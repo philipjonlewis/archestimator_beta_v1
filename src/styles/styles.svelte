@@ -14,6 +14,8 @@
   }
 
   body {
-    background-color: #f3f4f6;
+    /* @apply flex flex-col justify-center items-center w-screen h-screen; */
+    /* background-color: #f3f4f6; */
+    /* background-color: white; */
   }
 </style>
